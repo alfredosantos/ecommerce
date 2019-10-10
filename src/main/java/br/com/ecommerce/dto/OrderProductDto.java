@@ -4,8 +4,11 @@ import br.com.ecommerce.model.Product;
 
 public class OrderProductDto {
 
-  private Product product;
-  private Integer quantity;
+  public Product product;
+  public Integer quantity;
+
+  public OrderProductDto(Product product, Integer quantity) {
+  }
 
   public Product getProduct() {
     return product;

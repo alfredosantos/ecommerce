@@ -1,8 +1,8 @@
 package br.com.ecommerce.repository;
 
 import br.com.ecommerce.model.Order;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface OrderRepository extends CrudRepository<Order, Long> {
+public interface OrderRepository extends MongoRepository<Order, Long> {
 
 }
