@@ -57,7 +57,7 @@ public class OrderController {
     List<OrderProduct> orderProducts = new ArrayList<>();
     for (OrderProductDto dto : formDtos) {
       orderProducts
-          .add(orderProductService.create(new OrderProduct(order, productService.getProduct(dto
+          .add(orderProductService.create(new OrderProduct(productService.getProduct(dto
               .getProduct()
               .getId()), dto.getQuantity())));
     }

@@ -2,7 +2,8 @@ package br.com.ecommerce.service;
 
 import br.com.ecommerce.model.Order;
 import br.com.ecommerce.repository.OrderRepository;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,8 +24,7 @@ public class OrderServiceImpl implements OrderService {
 
   @Override
   public Order create(Order order) {
-    order.setDateCreated(LocalDate.now());
-
+    order.setDateCreated(new Date());
     return this.orderRepository.save(order);
   }
 

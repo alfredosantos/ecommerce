@@ -7,9 +7,6 @@ public class OrderProductDto {
   public Product product;
   public Integer quantity;
 
-  public OrderProductDto(Product product, Integer quantity) {
-  }
-
   public Product getProduct() {
     return product;
   }
@@ -25,4 +22,5 @@ public class OrderProductDto {
   public void setQuantity(Integer quantity) {
     this.quantity = quantity;
   }
+
 }

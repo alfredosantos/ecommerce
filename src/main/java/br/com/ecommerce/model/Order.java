@@ -1,30 +1,23 @@
 package br.com.ecommerce.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import java.time.LocalDate;
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-import javax.validation.Valid;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @Document
-@JsonDeserialize
 public class Order {
 
   @Id
   private String id;
 
-  @JsonFormat(pattern = "dd/MM/yyyy")
-  private LocalDate dateCreated;
+  private Date dateCreated;
 
   private String status;
 
-  @Valid
-  private List<OrderProduct> orderProducts = new ArrayList<>();
+  private List<OrderProduct> orderProducts;
 
   public Double getTotalOrderPrice() {
     double sum = 0D;
@@ -44,11 +37,11 @@ public class Order {
     this.id = id;
   }
 
-  public LocalDate getDateCreated() {
+  public Date getDateCreated() {
     return dateCreated;
   }
 
-  public void setDateCreated(LocalDate dateCreated) {
+  public void setDateCreated(Date dateCreated) {
     this.dateCreated = dateCreated;
   }
 
@@ -71,4 +64,5 @@ public class Order {
   public int getNumberOfProducts() {
     return this.orderProducts.size();
   }
+
 }
