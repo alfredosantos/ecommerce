@@ -26,22 +26,31 @@ To see your swagger enter url `http://localhost:8080/swagger-ui.html#`
 
 --------------------------------------
 # configure ecommerce environment properties
-- Required
-- Database
+Required
+Database
 MONGO_HOST
+
 MONGO_PORT
+
 MONGODB_USER
+
 MONGODB_PASSWORD
+
 MONGO_DATABASE
 
 - Required
 - Security
 OAUTH2_CLIENT_SCOPE
+
 OAUTH2_CLIENT_CLIENT_ID
+
 OAUTH2_CLIENT_CLIENT_SECRET
 
 - Optional
 MONGO_REPOSITORIES_ENABLED
+
 JPA_HIBERNATE_DDL_AUTO
+
 JPA_SHOW_SQL
+
 JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
