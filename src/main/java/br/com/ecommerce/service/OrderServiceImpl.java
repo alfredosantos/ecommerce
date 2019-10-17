@@ -2,7 +2,6 @@ package br.com.ecommerce.service;
 
 import br.com.ecommerce.model.Order;
 import br.com.ecommerce.repository.OrderRepository;
-import java.time.LocalDateTime;
 import java.util.Date;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

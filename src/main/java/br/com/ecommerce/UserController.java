@@ -1,4 +1,4 @@
-package br.com.ecommerce.controller;
+package br.com.ecommerce;
 
 import br.com.ecommerce.exception.ResourceNotFoundException;
 import br.com.ecommerce.model.User;

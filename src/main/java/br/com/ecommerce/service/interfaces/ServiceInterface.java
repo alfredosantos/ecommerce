@@ -9,4 +9,6 @@ public interface ServiceInterface<T> {
   Optional<User> findById(String userId);
 
   List<User> findAll();
+
+  User findByUserName(String userName);
 }

@@ -22,7 +22,7 @@ public class ProductServiceImpl implements ProductService {
   }
 
   @Override
-  public Product getProduct(long id) {
+  public Product getProduct(String id) {
     return productRepository
         .findById(id)
         .orElseThrow(() -> new ResourceNotFoundException("Product not found"));

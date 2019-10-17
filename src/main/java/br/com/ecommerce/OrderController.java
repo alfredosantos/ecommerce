@@ -1,4 +1,4 @@
-package br.com.ecommerce.controller;
+package br.com.ecommerce;
 
 import br.com.ecommerce.dto.OrderProductDto;
 import br.com.ecommerce.exception.ResourceNotFoundException;
@@ -52,6 +52,7 @@ public class OrderController {
     validateProductsExistence(formDtos);
     Order order = new Order();
     order.setStatus(OrderStatus.PAID.name());
+    order.setUserId(form.userId);
     order = this.orderService.create(order);
 
     List<OrderProduct> orderProducts = new ArrayList<>();
@@ -92,6 +93,7 @@ public class OrderController {
 
   public static class OrderForm {
 
+    public String userId;
     private List<OrderProductDto> productOrders;
 
     public List<OrderProductDto> getProductOrders() {

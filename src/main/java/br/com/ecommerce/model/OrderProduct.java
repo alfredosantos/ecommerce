@@ -1,7 +1,13 @@
 package br.com.ecommerce.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Document
 public class OrderProduct {
 
@@ -9,32 +15,8 @@ public class OrderProduct {
 
   private Integer quantity;
 
-  public OrderProduct() {
-  }
-
-  public OrderProduct(Product product, Integer quantity) {
-    this.product = product;
-    this.quantity = quantity;
-  }
-
   public Double getTotalPrice() {
     return getProduct().getPrice() * getQuantity();
-  }
-
-  public Product getProduct() {
-    return product;
-  }
-
-  public void setProduct(Product product) {
-    this.product = product;
-  }
-
-  public Integer getQuantity() {
-    return quantity;
-  }
-
-  public void setQuantity(Integer quantity) {
-    this.quantity = quantity;
   }
 
 }

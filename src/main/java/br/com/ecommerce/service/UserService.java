@@ -27,4 +27,8 @@ public class UserService implements ServiceInterface<User> {
   public User save(User user) {
     return userRepository.save(user);
   }
+
+  public User findByUserName(String userName) {
+    return userRepository.findByEmail(userName);
+  }
 }
